@@ -1,0 +1,65 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath, amssymb, amsthm, newtxtext, physics}
+\usepackage{float}
+
+\title{\textbf{The Hausdorff Measure}}
+\date{}
+\usepackage[margins = 0.25in]{geometry}
+\theoremstyle{plain} 
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{example}{Example}
+\newtheorem{observation}{Observation}
+\newtheorem{matlab}{MATLAB}
+\DeclareMathOperator{\diam}{diam}
+\begin{document}
+	\maketitle 
+	
+In geometric measure theory, we like to work with outer measures so much that we just call them measures. 
+	\begin{definition}
+		A(n) (outer) \textbf{\textit{measure}} $\mu$ on $\mathbb{R}^n$ is a function $\mu: \mathcal{P}(\mathbb{R}^n) \to [0, + \infty]$ such that, for $\{A_i\}_{i \in \mathbb{N}}$ a countable collection of subsets of $\mathbb{R}^n$ and any $A \subseteq \bigcup_{i \in \mathbb{N}} A_i$, we have $$\mu(A) \leq \sum_{i \in \mathbb{N}} \mu(A_i).$$ A set $A \subseteq \mathbb{R}^n$ is \textbf{\textit{measurable}} if, for all $E \subset \mathbb{R}^n$, $$\mu(E \cap A) + \mu(E \cap A^C) = \mu(E).$$
+	\end{definition}
+
+	
+\subsection*{The Hausdorff Measure}
+	Some notation:	
+		\begin{itemize}
+			\item The \textbf{\textit{diameter}} of a set $S$ is denoted by $\diam(S)$ and is given by the following formula: $$\diam(S) = \sup \{|x - y| : x, y \in S\}.$$ 
+			
+			\item The Lebesgue measure of the closed unit ball $\mathbb{B}^m(0, 1) \subseteq \mathbb{R}^m$ is denoted by $\alpha_m$ and is given by the following formula $$\alpha_m = \frac{\pi^{m/2}}{\Gamma\left(\frac{m}{2} + 1\right)}.$$ 
+		\end{itemize}
+	\begin{definition}
+		For any $A \subseteq \mathbb{R}^n$ define the $(\delta, m)$-\textbf{\textit{Hausdorff measure}} $\mathcal{H}_\delta^m(A)$ as $$\mathcal{H}_\delta^m(A) = \inf_{\substack{A \subset \bigcup S_j \\ \diam(S_j) < \delta}} \sum \alpha_m \left(\frac{\diam(S_j)}{2}\right)^m.$$ The \textbf{\textit{$m$-dimensional Hausdorff measure}} is just $\lim_{\delta \to 0} \mathcal{H}_{\delta}^m(A)$. 
+	\end{definition}
+
+\subsection*{Numerical Implementations [Big WIP]}
+	\begin{itemize}
+		\item For diameter...
+			\begin{enumerate}
+				\item Let $S = f(D)$ for some $D \subseteq \mathbb{R}^n$ and some function $f$. 
+				
+				\item Sample random points (the more points sampled, the more accurate the method) and take their distances. A stored array would probably look like (for defining a surface)
+					
+					\begin{table}[H]
+						\centering 
+						\begin{tabular}{c|c|c}
+							$\mathbf{x}$ & $\mathbf{y}$ & $|(\mathbf{x}, f(\mathbf{x}) - (\mathbf{y}, f(\mathbf{y}))|$ \\
+							\hline  
+							(1, 2) & (3, 4) & 0.1234 \\
+							(4, 3) & (1, 8) & 4.6512 \\
+							$\vdots$ & $\vdots$ & $\vdots$ 
+						\end{tabular}						
+					\end{table}
+				
+				\item Then, $\diam(S)$ is reported as the max in the third column. Let's do it.
+			\end{enumerate}
+	\end{itemize}
+
+	\begin{matlab}
+		$\diam(S)$ numerical implementation for surfaces. 
+	\end{matlab}
+		\begin{proof}[Implementation]
+			See the folder, will improve it later. 
+		\end{proof}
+\end{document}
