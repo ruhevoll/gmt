@@ -30,8 +30,40 @@ In geometric measure theory, we like to work with outer measures so much that we
 			\item The Lebesgue measure of the closed unit ball $\mathbb{B}^m(0, 1) \subseteq \mathbb{R}^m$ is denoted by $\alpha_m$ and is given by the following formula $$\alpha_m = \frac{\pi^{m/2}}{\Gamma\left(\frac{m}{2} + 1\right)}.$$ 
 		\end{itemize}
 	\begin{definition}
-		For any $A \subseteq \mathbb{R}^n$ define the $(\delta, m)$-\textbf{\textit{Hausdorff measure}} $\mathcal{H}_\delta^m(A)$ as $$\mathcal{H}_\delta^m(A) = \inf_{\substack{A \subset \bigcup S_j \\ \diam(S_j) < \delta}} \sum \alpha_m \left(\frac{\diam(S_j)}{2}\right)^m.$$ The \textbf{\textit{$m$-dimensional Hausdorff measure}} is just $\lim_{\delta \to 0} \mathcal{H}_{\delta}^m(A)$. 
+		For any $A \subseteq \mathbb{R}^n$ define the $(\delta, m)$-\textbf{\textit{Hausdorff measure}} $\mathcal{H}_\delta^m(A)$ as $$\mathcal{H}_\delta^m(A) = \inf_{\substack{A \subset \bigcup S_j \\ \diam(S_j) \leq \delta}} \sum \alpha_m \left(\frac{\diam(S_j)}{2}\right)^m.$$ The \textbf{\textit{$m$-dimensional Hausdorff measure}} is defined as $\mathcal{H}^m(A) = \lim_{\delta \to 0} \mathcal{H}_{\delta}^m(A)$. 
 	\end{definition}
+
+	\begin{observation} ~
+		Let $\mathcal{H}^m$ be the $m$-dimensional Hausdorff measure over $\mathbb{R}^n$. 
+			\begin{itemize}
+				\item[(1)] $\mathcal{H}^m$ is countably subadditive. 
+				
+				\item[(2)] All Borel sets of $\mathbb{R}^n$ are $\mathcal{H}^m$-measurable. 
+				
+				\item[(3)] For all $A \subset \mathbb{R}^n$ there exists a Borel subset $B \subset \mathbb{R}^n$ such that $$\mathcal{H}^m(A) = \mathcal{H}^m(B).$$
+			\end{itemize}
+	\end{observation}
+
+
+
+\newpage 
+\subsection*{The Hausdorff Dimension}
+\newpage 
+
+
+	\begin{definition}
+		Let $A \subseteq \mathbb{R}^n$ be nonempty. The \textbf{\textit{Hausdorff dimension}} of $A$ is defined as 
+			\begin{align*}
+				\inf\{m \geq 0 : \mathcal{H}^m(A) < \infty\} &= \inf \{m : \mathcal{H}^m(A) = 0\} \\ 
+				&= \sup \{m : \mathcal{H}^m(A) > 0\} \\
+				&= \sup \{m : \mathcal{H}^m(A) = \infty\}.
+			\end{align*}
+	\end{definition}
+
+
+	\begin{observation}
+		All four definitions of the Hausdorff dimension above are equivalent.
+	\end{observation}
 
 \subsection*{Numerical Implementations [Big WIP]}
 	\begin{itemize}
