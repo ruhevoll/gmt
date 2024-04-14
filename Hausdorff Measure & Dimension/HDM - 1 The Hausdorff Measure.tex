@@ -13,6 +13,7 @@
 \newtheorem{observation}{Observation}
 \newtheorem{matlab}{MATLAB}
 \DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\dist}{dist}
 \begin{document}
 	\maketitle 
 	
@@ -32,7 +33,8 @@ In geometric measure theory, we like to work with outer measures so much that we
 	\begin{definition}
 		For any $A \subseteq \mathbb{R}^n$ define the $(\delta, m)$-\textbf{\textit{Hausdorff measure}} $\mathcal{H}_\delta^m(A)$ as $$\mathcal{H}_\delta^m(A) = \inf_{\substack{A \subset \bigcup S_j \\ \diam(S_j) \leq \delta}} \sum \alpha_m \left(\frac{\diam(S_j)}{2}\right)^m.$$ The \textbf{\textit{$m$-dimensional Hausdorff measure}} is defined as $\mathcal{H}^m(A) = \lim_{\delta \to 0} \mathcal{H}_{\delta}^m(A)$. 
 	\end{definition}
-
+	
+	\newpage 
 	\begin{observation} ~
 		Let $\mathcal{H}^m$ be the $m$-dimensional Hausdorff measure over $\mathbb{R}^n$. 
 			\begin{itemize}
@@ -44,7 +46,42 @@ In geometric measure theory, we like to work with outer measures so much that we
 			\end{itemize}
 	\end{observation}
 
+\noindent Note: Conditions (2) and (3) give that $\mathcal{H}^m$ is a \textbf{\textit{Borel regular measure}}. 
+	\begin{proof} ~
+		\begin{itemize}
+			\item[(1)]  Let $\{A_i\}_{i \in \mathbb{N}}$ be a countable collection of subsets of $\mathbb{R}^n$, and $A$ any subset of $\bigcup_{i \in \mathbb{N}} A_i$. Then,
+				\begin{align*}
+					\mathcal{H}_\delta^m(A) &= \inf_{\substack{A \subseteq \bigcup S_j \\ \diam(S_j) \leq \delta}} \sum  \alpha_m \left(\frac{\diam(S_j)}{2}\right)^m \\
+					\mathcal{H}_\delta^m(\bigcup A_i) &= \inf_{\substack{\bigcup A_i\subseteq \bigcup S_j \\ \diam(S_j) \leq \delta}} \sum  \alpha_m \left(\frac{\diam(S_j)}{2}\right)^m  
+				\end{align*}
+			Now, any countable covering of $\bigcup_{i \in \mathbb{N}} A_i$ is also countable covering of $A$. Therefore, 
+				$$\left\{\{S_j\}_{j \in \mathbb{N}} : \bigcup_{i \in \mathbb{N}} A_i \subseteq \bigcup_{j \in \mathbb{N}} S_j \text{ and } \diam(S_j) \leq \delta\right\} \subseteq \left\{\{S_j\}_{j \in \mathbb{N}} :A \subseteq \bigcup_{j \in \mathbb{N}} S_j \text{ and } \diam(S_j) \leq \delta\right\}.$$ Recall that $A \subseteq B \implies \inf A \geq \inf B$. Hence, $$\mathcal{H}_\delta^m\left(\bigcup A_i\right) \geq \mathcal{H}_\delta^m(A).$$ Passing to the limit as $\delta \to 0$ gives the result. 
+			
+			\item[(2)] Note that all Borel sets are measurable if and only if Cartheodory's criterion holds:  $$\mathcal{H}^m(A_1 \cup A_2) = \mathcal{H}^m(A_1) + \mathcal{H}^m(A_2)$$ for all $A_1, A_2 \subseteq \mathbb{R}^n$ with $$\dist(A_1, A_2) := \inf\{|x - y| : x \in A_1, y \in A_2\} > 0.$$ So, we check Cartheodory's criterion for $\mathcal{H}^m$ and pack our bags. So, let $A_1, A_2 \subseteq \mathbb{R}^n$ with $\dist(A_1, A_2) > 0$. Since we already know that $$\mathcal{H}^m(A_1 \cup A_2) \leq \mathcal{H}^m(A_1) + \mathcal{H}^m(A_2)$$ by countable (which implies finite) subadditivity, it suffices to prove $$\mathcal{H}^m(A_1) + \mathcal{H}^m(A_2) \leq \mathcal{H}^m(A_1 \cup A_2).$$ We have,
+				\begin{align*}
+					\mathcal{H}_\delta^m(A_1) + \mathcal{H}_\delta^m(A_2) &= \inf_{\substack{A_1 \subseteq \bigcup S_j^1 \\ \diam(S_j^1) \leq \delta}} \sum \alpha_m \left(\frac{\diam(S_j^1)}{2}\right)^m + \inf_{\substack{A_2 \subseteq \bigcup S_j^2 \\ \diam(S_k^2) \leq \delta}} \sum \alpha_m \left(\frac{\diam(S_k^2)}{2}\right)^m \\
+					&= \inf_{\substack{A_1 \subseteq \bigcup S_j^1, A_2 \subseteq \bigcup S_k^2 \\ \diam(S_j^1) \leq \delta, \diam(S_k^2) \leq \delta}} \sum_{j, k} \alpha_m \left[\left(\frac{\diam(S_j^1)}{2}\right)^m + \left(\frac{\diam(S_k^2)}{2}\right)^m\right] \\
+					&\leq \inf_{\substack{A_1 \subseteq \bigcup S_j^1, A_2 \subseteq \bigcup S_k^2 \\ \diam(S_j^1) \leq \delta, \diam(S_k^2) \leq \delta}} \sum_{j, k} \alpha_m  \left(\frac{\diam(S_j^1) + \diam(S_k^2)}{2}\right)^m \\
+					&\leq \inf_{\substack{A_1 \subseteq \bigcup S_j^1, A_2 \subseteq \bigcup S_k^2 \\ \diam(S_j^1) \leq \delta, \diam(S_k^2) \leq \delta  \\ S_j^1 \cap S_k^2 = \emptyset}} \sum_{j, k} \alpha_m  \left(\frac{\diam(S_j^1 \cup S_k^2)}{2}\right)^m \\
+					&\leq \inf_{\substack{A_1 \subseteq \bigcup S_j^1, A_2 \subseteq \bigcup S_k^2 \\ \boxed{\diam(S_j^1 \cup S_k^2) \leq \delta }  \\ S_j^1 \cap S_k^2 = \emptyset}} \sum_{j, k} \alpha_m  \left(\frac{\diam(S_j^1 \cup S_k^2)}{2}\right)^m \\
+				\end{align*}
+			For any covering $\{S_j\}_{j \in \mathbb{N}}$ of $A_1 \cup A_2$, observe that by virtue of the fact $\dist(A_1, A_2) > 0$, we have $$\diam(S_j) \geq \diam(S_j \cap A_1) + \diam(S_j \cap A_2).$$ The collections $\{S_j \cap A_1\}_{j \in \mathbb{N}}$ and $\{S_j \cap A_2\}_{j \in \mathbb{N}}$ form disjoint covers of $A_1$, $A_2$ respectively. So, when considering $\mathcal{H}_\delta^m(A_1 \cup A_2)$, it suffices to take the infimum over disjoint covers of $A_1$ and $A_2$... in fact, these infima are equal since we have reduced the size of our cover, and we use the fact that $ A \subseteq B \implies \inf(A) \geq \inf B$, which forces the following equality: 
+			
+			$$\inf_{\substack{A_1 \subseteq \bigcup S_j^1, A_2 \subseteq \bigcup S_k^2 \\ \boxed{\diam(S_j^1 \cup S_k^2) \leq \delta }  \\ S_j^1 \cap S_k^2 = \emptyset}} \sum_{j, k} \alpha_m  \left(\frac{\diam(S_j^1 \cup S_k^2)}{2}\right)^m = \inf_{\substack{(A_1 \cup A_2) \subseteq \bigcup S_j \\ \diam(S_j) \leq \delta}} \sum \alpha_m \left(\frac{\diam(S_j)}{2}\right)^m.$$ The result follows by passing to the limit as $\delta \to 0$. 
+			
+			\item[(3)]  Let $A \subseteq \mathbb{R}^n$ be arbitrary, and note that for any $S_j$ in a covering of $A$, we have $$\diam(S_j) = \diam(\overline{S_j}).$$ Since $\overline{S_j}$ is closed, it is Borel. We can write $$\mathcal{H}^m(A) = \lim_{\delta \to 0} \inf_{\substack{A \subseteq \bigcup S_j \\ \diam(S_j) < \delta}} \sum \alpha_m \left(\frac{\diam(S_j)}{2}\right)^m = \lim_{\delta \to 0} \inf_{\substack{A \subseteq \bigcup \overline{S_j} \\ \diam(\overline{S_j}) < \delta}} \sum \alpha_m \left(\frac{\diam(\overline{S_j})}{2}\right)^m.$$ 
+			By a property of infimum, there exists a countable sequence of such Borel coverings $\{S_j^{(k)}\}_{k \in \mathbb{N}}$ defining $\mathcal{H}^m(A)$ (in the sense that their values when plugged into the summation above forms a non-increasing sequence of positive numbers tending to the value of $\mathcal{H}^m(A)$). Hence, let $$B = \bigcap_k \bigcup_j S_j^{(k)}$$ which has the same Hausdorff measure of $A$. Cool beans dude. 
+		\end{itemize}
+	\end{proof}
 
+\subsection*{Hausdorff Measure Exercises}
+	\noindent \textbf{Exercise 1.} Let $I$ be the unit interval $[0, 1]$ in $\mathbb{R}$. Prove that $\mathcal{H}^1(I) = 1$. 
+	
+	\noindent \textbf{Exercise 2.} Prove that $\mathcal{H}^n(\mathbb{B}^n(\mathbf{0}, 1)) < \infty$ just using the definition of Hausdorff measure.
+	
+	\noindent \textbf{Exercise 3.} Let $A$ be a nonempty subset of $\mathbb{R}^n$. First, prove that if $0 \leq m < k$ and $\mathcal{H}^m(A) < \infty$, then $\mathcal{H}^k(A) = 0$. 
+	
+	\noindent \textbf{Exercise 3.} Define a set $A \subset \mathbb{R}^2$ as follows: Let $A_0$ be a closed equilateral triangle of side 1. Let $A_1$ be the three equilateral triangular regions of side 1/3 in the corners of $A_0$. In general, let $A_{j + 1}$ be the triangular regions, a third of the size, in the corners of the triangles of $A_j$. Let $A = \bigcap A_j$. Prove that $\mathcal{H}^1(A) = 1$. 
 
 \newpage 
 \subsection*{The Hausdorff Dimension}
