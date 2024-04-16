@@ -77,10 +77,18 @@ In geometric measure theory, we like to work with outer measures so much that we
 \subsection*{Hausdorff Measure Exercises}
 	\noindent \textbf{Exercise 1.} Let $I$ be the unit interval $[0, 1]$ in $\mathbb{R}$. Prove that $\mathcal{H}^1(I) = 1$. 
 		\begin{proof}
-			To compute $\mathcal{H}^1(I) = 1$, we simply show two inequalities $$\mathcal{H}^1(I) \geq 1 \qquad \text{and} \qquad \mathcal{H}^1(I) \leq 1.$$
+			To compute $\mathcal{H}^1(I) = 1$, we simply show two inequalities $$\mathcal{H}^1(I) \geq 1 \qquad \text{and} \qquad \mathcal{H}^1(I) \leq 1.$$ Let's start by writing the formula for $\mathcal{H}^1(I)$: \begin{equation} \mathcal{H}^1(I) = \lim_{\delta \to 0} \inf_{\substack{I \subset \bigcup S_j \\ \diam(S_j) \leq \delta}} \sum \alpha_1 \left(\frac{\diam(S_j)}{2}\right). \end{equation} 
+		Note that $\alpha_1 = \frac{\sqrt{\pi}}{\Gamma(3/2)} = \frac{\sqrt{\pi}}{\frac{\sqrt{\pi}}{2}} = 2$ and so (1) reduces to $$\mathcal{H}^1(I) = \lim_{\delta \to 0} \inf_{\substack{I \subset \bigcup S_j \\ \diam(S_j) \leq \delta}} \sum \diam(S_j).$$ For any given $\delta$, there exists $n$ large enough such that $$\frac{1}{2^n} \leq \delta.$$ Then, we can cover $I$ by taking $$I \subset [0, 2^{-n}] \cup [2^{-n}, 2 \cdot 2^{-n}] \cup \cdots [(k - 1)2^{-n}, k 2^{-n}] \cup \cdots \cup [1 - 2^{-n}, 1].$$ Each element of the cover has diameter $\leq \delta$. This is a partition of $[0, 1]$, and so the sum of the diameters of the members of this partition is clearly $1$. Hence, we have so far that $\mathcal{H}^1(I) \leq 1$. 
+		
+		
+		
+		To prove that $\mathcal{H}^1(I) \geq 1$, we'll show that given a cover $\{S_j\}$ of $I$, $\sum \diam(S_j) \geq 1$. This is obvious, since it is easy to see as a property of diameters that if $A \subseteq B$, $\diam(A) \leq \diam(B)$. Hence, $$1 = \diam(I) \leq \diam\left(\bigcup S_j\right) \leq \sum \diam(S_j)$$ and so we get that $\mathcal{H}^1(I) \geq 1$, and the equality follows. 
 		\end{proof}
 	
 	\noindent \textbf{Exercise 2.} Prove that $\mathcal{H}^n(\mathbb{B}^n(\mathbf{0}, 1)) < \infty$ just using the definition of Hausdorff measure.
+		\begin{proof}
+			content...
+		\end{proof}
 	
 	\noindent \textbf{Exercise 3.} Let $A$ be a nonempty subset of $\mathbb{R}^n$. First, prove that if $0 \leq m < k$ and $\mathcal{H}^m(A) < \infty$, then $\mathcal{H}^k(A) = 0$. 
 	
