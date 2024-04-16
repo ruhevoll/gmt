@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.5)  16 APR 2024 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.5)  16 APR 2024 18:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -387,44 +387,54 @@ Overfull \hbox (5.38388pt too wide) detected at line 58
 [] \OMS/cmsy/m/n/10 ^^R [] \OML/cmm/m/it/10 :
  []
 
-[2] [3] [4] [5] [6] (HDM - 1 The Hausdorff Measure.aux)
+[2] [3] [4]
+Overfull \hbox (1.33838pt too wide) in paragraph at lines 92--93
+\OT1/ntxtlf/m/n/10 and fol-low a pro-ce-dure sim-i-lar to Ex-er-cise 1. For all
+ $\OML/cmm/m/it/10 ^^N \OMS/cmsy/m/n/10 ^^U []$\OT1/ntxtlf/m/n/10 , we have tha
+t $\OMS/cmsy/m/n/10 H[]\OT1/cmr/m/n/10 (\U/msb/m/n/10 B\OT1/cmr/m/n/10 (\OT1/cm
+r/bx/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1)) \OMS/cmsy/m/n/10 ^^T \OML/cmm
+/m/it/10 [] []\OT1/cmr/m/n/10 ([0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1][]) =
+ []
+
+[5] [6] [7] (HDM - 1 The Hausdorff Measure.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5821 strings out of 474485
- 86865 string characters out of 5743735
+ 5823 strings out of 474485
+ 86891 string characters out of 5743735
  1946542 words of memory out of 5000000
  28015 multiletter control sequences out of 15000+600000
- 579671 words of font info for 88 fonts, out of 8000000 for 9000
+ 580818 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,19n,93p,777b,358s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmex10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cmextra/cmex7.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/swhit/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/swhit/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/swhit/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/swh
-it/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Us
-ers/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmsy5.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmsy7.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/symbols/msbm10.pfb><C:/Users/swhit/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/swhit/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/swhit/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/swhit/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/Users/swhit/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/swhit/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on "HDM - 1 The Hausdorff Measure.pdf" (6 pages, 297721 bytes).
+fonts/cm/cmbx7.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/swhit/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/swhit/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/swhit/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/swh
+it/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/U
+sers/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pf
+b><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy5.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmsy7.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/swhit/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/swhit/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/swhi
+t/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/swh
+it/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/Users/s
+whit/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/
+swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on "HDM - 1 The Hausdorff Measure.pdf" (7 pages, 309820 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 128 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
