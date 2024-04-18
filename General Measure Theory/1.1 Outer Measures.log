@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.5)  18 APR 2024 14:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.5)  18 APR 2024 15:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,11 +381,11 @@ L3 programming layer <2020/03/25>
 Here is how much of TeX's memory you used:
  5783 strings out of 474485
  85883 string characters out of 5743735
- 1933542 words of memory out of 5000000
+ 1934542 words of memory out of 5000000
  27979 multiletter control sequences out of 15000+600000
  581839 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,8n,93p,715b,243s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,8n,93p,1099b,243s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -399,13 +399,14 @@ hit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
 Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.
 pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/newtx/ztmb.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/newtx/ztmbi.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/newtx/ztmr.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/newtx/ztmri.pfb>
-Output written on "1.1 Outer Measures.pdf" (1 page, 230440 bytes).
+lic/amsfonts/symbols/msbm7.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/newtx/ztmb.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/newtx/ztmbi.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/newtx/ztmr.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/newtx/ztmri.pfb>
+Output written on "1.1 Outer Measures.pdf" (1 page, 237942 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
