@@ -1,0 +1,44 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath, amssymb, amsthm, newtxtext, physics}
+\usepackage{float}
+
+\title{\textbf{Some Theory of Outer Measures}}
+\date{}
+\author{Jacob White \\ University of Nebraska Omaha}
+\usepackage[margins = 0.25in]{geometry}
+\theoremstyle{plain} 
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{example}{Example}
+\newtheorem{observation}{Observation}
+\newtheorem{proposition}{Proposition}
+\newtheorem{matlab}{MATLAB}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\dist}{dist}
+\begin{document}
+	\maketitle 
+	
+In geometric measure theory, we like to work with outer measures so much that we just call them measures. 
+	\begin{definition}
+		A set function $\mu: \{A : A \subset X\} \to [0, \infty] = \{t : 0 \leq t \leq \infty\}$ is called a(n) (outer) \textbf{\textit{measure}} if
+			\begin{itemize}
+				\item[(1)] $\mu(\emptyset) = 0$
+				
+				\item[(2)] $\mu(A) \leq \mu(B)$ whenever $A \subset B \subset X$, and
+				
+				\item[(3)] $\displaystyle{\mu\left(\bigcup_{i = 1}^\infty A_i\right) \leq \sum_{i = 1}^\infty \mu(A_i)}$ whenever $A_1, A_2, \dots \subset X$.  
+			\end{itemize}
+	\end{definition}
+	
+Any countably additive non-negative set function on a $\sigma$ algebra $\mathcal{A}$ of subsets of $X$ produces a measure. Consider the following:
+	
+	\begin{proposition}
+		Let $\nu$ be a countably additive non-negative set function on a $\sigma$-algebra $\mathcal{A}$ of subsets of $X$. Then, \begin{equation}\nu^\ast(A) = \inf \{\nu(B) : A \subset B \in \mathcal{A}\}\end{equation} defines a measure over $X$. 
+	\end{proposition} 
+		\begin{proof}
+			Since $\emptyset \in \mathcal{A}$, $\nu^\ast(\emptyset) = \nu(\emptyset)$. Now, by the finite additivity of $\nu$ (which follows from its countable additivity), we have $$\nu(\emptyset) = \nu(\emptyset \cup \emptyset) = 2 \nu(\emptyset) \implies \nu^\ast(\emptyset) = \nu(\emptyset) = 0.$$ Now suppose that $A \subset B  \in \mathcal{A}$, since $$\{\nu(C) : B \subset C  \in \mathcal{A}\} \subseteq \{\nu(C) : A \subset C \in \mathcal{A}\}$$ it follows that\footnote{By the property of infimum where $A \subseteq B \subseteq \mathbb{R}$ implies $\inf B \leq \inf A$} $$\nu^\ast(A) = \inf \{\nu(C) : A \subset C  \in \mathcal{A}\} \leq \inf \{\nu(C) : B \subset C  \in \mathcal{A}\} = \nu^\ast(B).$$  To show the countable subadditivity of $\nu^\ast$, for a sequence $\{A_i\}_{i \in \mathbb{N}} \in \mathcal{P}(X)$ and for another sequence $\{B_{i, j}\}_{j \in \mathbb{N}} \in \mathcal{P}(X)$ such that $A_i \subset \bigcup_{i = j}^{n} B_{i, j}$ for all $i \in \mathbb{N}$, let $\epsilon > 0$ such that $$\nu^\ast(A_i) + \frac{\epsilon}{2^i} \geq $$
+		\end{proof}
+	
+
+\end{document}
